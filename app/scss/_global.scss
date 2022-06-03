@@ -1,14 +1,6 @@
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+html,
+body{
+  height: 100%;
 }
 
 body {
@@ -16,6 +8,12 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: $defoult;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
 }
 
 .container{
@@ -27,4 +25,17 @@ body {
 
 .logo {
   flex: 0 0 200px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
