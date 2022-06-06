@@ -49,3 +49,8 @@ main{
   border-radius: 6px;
   padding: 12px 25px;
 }
+
+.title{
+  @extend %opensans-600;
+  font-size: 16px;
+}
