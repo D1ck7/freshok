@@ -1,0 +1,75 @@
+html,
+body{
+  height: 100%;
+}
+
+body {
+  @extend %opensans-400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $defoult;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.container{
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  flex: 0 0 200px;
+  outline: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  @extend %opensans-400;
+  font-size: 18px;
+  width: 181px;
+  height: 47px;
+  color: $defoult;
+  background-color: $accent;
+  border-radius: 6px;
+  padding: 12px 25px;
+  outline: transparent;
+}
+
+.btn:hover {
+  background-color: #4D810C;
+}
+
+.btn:focus {
+  box-shadow: 0px 0px 0px 4px #E0EDCF;
+}
+
+.btn:active {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title{
+  @extend %ruda-600;
+  font-size: 32px;
+  width: fit-content;
+  color: $title;
+}
+
+
