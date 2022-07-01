@@ -1,0 +1,31 @@
+.badges{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__item{
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: $white;
+    font-weight: 700;
+    font-size: 10px;
+    
+    text-transform: uppercase;
+    display: none;
+
+    &:not(:last-child){
+      margin-bottom: 6px;
+    }
+    &--news{
+      background-color: $green-900;
+    }
+    &--sale{
+      background-color: $red-900;
+    }
+    &--hit{
+      background-color: $orange-900;
+    }
+    &--on{
+      display: block;
+    }
+  }
+}

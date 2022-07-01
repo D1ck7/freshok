@@ -1,0 +1,23 @@
+.top-products {
+  padding: 72px;
+
+  &__title {
+    margin: 0 auto 30px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 43px;
+  }
+}
+
+.mixitup-control-active {
+    border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+}
+
+.btn--white {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,190 @@
+.footer {
+  font-weight: 400;
+  font-size: 14px;
+  color: $white;
+  background-color: $dark-800;
+  padding-top: 30px;
+
+  &__logo {
+    display: block;
+    max-width: fit-content;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 66px;
+  }
+
+  &__form {
+    position: relative;
+    max-width: 306px;
+    width: 100%;
+  }
+  
+  &__list {
+    column-count: 3;
+    column-gap: 75px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__link {
+     outline: transparent;
+     transition: color 0.3s,
+     opacity 0.3s;
+
+     &:focus {
+       box-shadow: 0 0 0 3px $green-100;
+       border-radius: 3px;
+     }
+
+     &:hover {
+       opacity: 0.7;
+     }
+
+     &:active {
+       color: $green-200;
+       box-shadow: none;
+     }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.subscribe {
+  line-height: 1;
+
+  &__text {
+    margin-bottom: 18px;
+  }
+
+  &__field {
+    position: relative;
+    line-height: 1;
+    max-width: 181px;
+    width: 100%;
+    background-color: $white;
+    padding: 11px;
+    border-radius: 6px 0 0 6px;
+    outline: transparent;
+
+    &:focus {
+      border: 1px solid $green-800;
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+    
+    &::placeholder {
+      color: $dark-700;
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.4;
+    position: absolute;
+    color: $white;
+    background-color: $green-800;
+    top: 32px;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 17px;
+    text-transform: uppercase;
+    outline: transparent;
+    transition: color 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green-200;
+      border-radius: 6px;
+    }
+
+    &:hover {
+      background-color: $green-700;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px $dark-600;
+    }
+  }
+}
+
+.contacts {
+  &__list {
+  margin-bottom: 18px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+       margin-bottom: 18px; 
+    }
+  }
+
+  &__link {
+    outline: transparent;
+    transition: color 0.3s, opacity 0.3s;
+
+    &:focus {
+       box-shadow: 0 0 0 3px $green-100;
+       border-radius: 3px;
+    }
+
+    &:hover {
+       opacity: 0.7;
+    }
+
+    &:active {
+       color: $green-200;
+       box-shadow: none;
+    }
+  }
+
+  .social {
+    &__link {
+      outline: transparent;
+      transition: color 0.3s;
+
+      &:focus {
+        box-shadow: 0 0 0 3px $green-200;
+        border-radius: 3px;
+      }
+
+      &:active {
+        @include recolor($green-200);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  border-top: 1px solid $silver-750;
+
+  &__link {
+   text-transform: uppercase;  
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px;
+    }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
+
+
+

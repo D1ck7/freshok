@@ -1,0 +1,107 @@
+@use "sass:math";
+
+html,
+body{
+  height: 100%;
+}
+
+body {
+  font-family:  'Open-Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.3;
+  color: $dark-900;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.container{
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  flex: 0 0 200px;
+  outline: transparent;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $silver-700;
+    border-radius: 6px;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title{
+  font-size: 32px;
+  width: fit-content;
+  color: $dark-900;
+}
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin recolor($color: #000) {
+    $r: math.div(red($color), 255);
+    $g: math.div(green($color), 255);
+    $b: math.div(blue($color), 255);
+    $a: alpha($color);
+
+    $lightness: lightness($color);
+    filter: saturate(0%) brightness(0%) invert  ($lightness) opacity($a);
+
+
+    $svg-filter-id: "recolor";
+    filter: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="#{$svg-filter-id}"      color-interpolation-filters="sRGB">\
+        <feColorMatrix type="matrix" values="\
+         0 0 0 0 #{$r}\
+         0 0 0 0 #{$g}\
+         0 0 0 0 #{$b}\
+         0 0 0 #{$a} 0\
+        "/>\
+      </filter>\
+    </svg>\
+    ##{$svg-filter-id}');    
+}
+
+
+
+
+
